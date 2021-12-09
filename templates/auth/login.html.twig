@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Enregistrement{% endblock %}
+
+{% block body %}
+
+    {#
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button type="submit">S'enregistrer</button>
+    {{ form_end(form) }}
+    #}
+
+    <form action="{{ path("login") }}" method="post">
+        <div><input type="text" required placeholder="email" name="_username"></div>
+        <div><input type="password" required placeholder="mot de passe" name="_password"></div>
+        <div>
+            <button type="submit">Connexion</button>
+        </div>
+    </form>
+
+{% endblock %}
